@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Haskus :: $section$</title>
+  <meta charset="utf-8" />
+  <!--<link rel="stylesheet" type="text/css" href="/css/default.css" />-->
+  <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/syntax.css" />
+  <!--<link rel="alternate"
+        type="application/atom+xml"
+        title="Haskus"
+        href="/atom.xml" />-->
+
+   $if(section)$
+   <style>
+        header nav li.$section$ a {
+            color:#FFF;
+            background:#7096B6;
+            background:rgba(255,255,255,.2);
+            text-decoration:none;
+            border-radius:40px;
+            -moz-border-radius:40px;
+            -khtml-border-radius:40px;
+            -webkit-border-radius:40px;
+        }
+   </style>
+   $endif$
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="wrapper">
+				
+				<!-- logo/sitename -->
+				<a href="/index.html" id="logo" >Haskus</a>
+				
+
+               <div class="motto">A software development company<hr/></div>
+
+				<!-- main navigation -->
+				<nav id="main-nav">
+               
+					<ul>
+                        <li class="about"><a href="/index.html" title="About us">About us</a></li>
+                        <li class="contact"><a href="/contact/index.html" title="Contact us">Contact us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+        $if(section)$
+		<!-- breadcrumbs: only show when NOT on homepage -->
+		<p class="breadcrumbs" >
+			<span class="wrapper">
+				<a href="/index.html">Home</a>
+                $if(path0)$
+                &nbsp;&nbsp;&#149;&nbsp;&nbsp;  <a href="/$path0$/index.html">$path0$</a>
+                $endif$
+                $if(path1)$
+                &nbsp;&nbsp;&#149;&nbsp;&nbsp;  <b>$path1$</b>
+                $endif$
+                &nbsp;&nbsp;&#149;&nbsp;&nbsp;  <b>$title$</b>
+			</span>
+		</p>
+        $endif$
+		
+    </header>
+    <section>
+        $body$
+    </section>
+    <footer>
+        <p>
+        <a href="http://www.haskus.fr">Home page</a> -
+        <a href="http://jaspervdj.be/hakyll/index.html">Generated with Hakyll</a>
+        </p>
+
+    </footer>
+</body>
+</html>
