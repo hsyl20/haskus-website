@@ -1,11 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Data.Functor ((<$>))
 import Data.List (isPrefixOf)
-import Data.Monoid (mappend,mconcat)
 import Data.Text (pack, unpack, replace, empty)
-import System.FilePath.Posix (takeBaseName)
+import System.FilePath.Posix
 
 import Hakyll
 
@@ -27,26 +25,27 @@ main = hakyll $ do
         compile copyFileCompiler
     
     -- Copy Images
-    match "images/**/*" $ do
+    match "images/**" $ do
         route   idRoute
         compile copyFileCompiler
 
     -- home
-    match "pages/home.html" $ do
+    match "pages/home.md" $ do
         route $ customRoute $ const "index.html"
-        let ctx = mconcat
-              [ constField "title" "About us"
-              , constField "section" "About us"
-              , defaultContext
-              ]
-        compile $ getResourceBody
-             >>= loadAndApplyTemplate "templates/page.html" ctx
-             >>= loadAndApplyTemplate "templates/default.html" ctx
+        compile $ pandocCompiler
+             >>= loadAndApplyTemplate "templates/page.html" defaultContext
+             >>= loadAndApplyTemplate "templates/default.html" defaultContext
              >>= relativizeUrls
     
     -- Static pages
-    match "pages/*" $ do
-        route $ customRoute $ (\p -> takeBaseName (toFilePath p) ++ "/index.html")
+    match "pages/**" $ do
+        let
+          makeRoute p = dirs </> fname </> "index.html"
+            where
+               -- drop /pages and the filename
+               dirs = joinPath $ tail $ init $ splitPath $ toFilePath p
+               fname = takeBaseName $ toFilePath p
+        route $ customRoute makeRoute
         compile $ pandocCompiler
            >>= loadAndApplyTemplate "templates/page.html" defaultContext
            >>= loadAndApplyTemplate "templates/default.html"  defaultContext

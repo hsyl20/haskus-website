@@ -184,41 +184,46 @@ article header .tags a {
 }
 
 article h1 {
-	font-family: 'Yanone Kaffeesatz', arial, helvetica, sans-serif;
-	margin:0 0 10px 0;
+    font-family: sans-serif;
+    font-variant:small-caps;
+    font-weight:500;
+	margin:0 0 0.5em 0;
 	color: #275176;
-	font-size:37px;
+	font-size:1.5em;
 }
 article h2 {
-	font-family: 'Yanone Kaffeesatz', arial, helvetica, sans-serif;
-	margin:0 0 10px 0;
-	color: #222222;
-	font-size:30px;
+    font-family:sans-serif;
+    font-variant:small-caps;
+    font-weight:normal;
+	margin:0 0 0.5em 0;
+	color: #376186;
+	font-size:1.4em;
 }
 article h3 {
 	font-family: 'Yanone Kaffeesatz', arial, helvetica, sans-serif;
-	margin:0 0 15px 0;
-	color: #275176;
-	font-size:25px;
+	margin:0.9em 0 0.3em 0;
+    font-weight:normal;
+	color: #376186;
+	font-size:1.3em;
 }
 article h4 {
 	font-family: 'Yanone Kaffeesatz', arial, helvetica, sans-serif;
 	margin:0 0 10px 0;
 	color: #555;
-	font-size:20px;
 	font-weight:100;
+	font-size:1.2em;
 }
 article h5 {
 	font-family: arial, serif;
 	margin:0 0 10px 0;
 	color: #333;
-	font-size:15px;
+	font-size:1.2em;
 }
 article h6 {
 	font-family: arial, serif;
 	margin:0 0 10px 0;
 	color: #666;
-	font-size:14px;
+	font-size:1.2em;
 }
 
 article section img {
@@ -234,7 +239,7 @@ article section {
 	color:#333;	
 }
 article section p {
-   margin:0 0 25px 0;
+   margin:0 0 0.7em 0;
    text-align:justify;
 }
 article section ul, 
@@ -385,4 +390,11 @@ footer a:hover, footer a:focus {
 /* Fix sourceCode indentation */
 pre {
    white-space:pre;
+}
+
+.logo {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:300px;
 }

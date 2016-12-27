@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+   $if(section)$
   <title>Haskus :: $section$</title>
+  $else$
+  <title>Haskus</title>
+  $endif$
   <meta charset="utf-8" />
   <!--<link rel="stylesheet" type="text/css" href="/css/default.css" />-->
   <link rel="stylesheet" type="text/css" href="/css/reset.css" />
@@ -42,8 +46,8 @@
 				<nav id="main-nav">
                
 					<ul>
-                        <li class="about"><a href="/index.html" title="About us">About us</a></li>
-                        <li class="contact"><a href="/contact/index.html" title="Contact us">Contact us</a></li>
+                        <li class="about"><a href="/about" title="About us">About us</a></li>
+                        <li class="contact"><a href="/contact" title="Contact us">Contact us</a></li>
 					</ul>
 				</nav>
 			</div>
