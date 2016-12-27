@@ -5,15 +5,15 @@ section:
 
 Haskus_ is a software development company founded in 2016. Don't hesitate to
 `contact us`_ if you would like us to develop something for you!
-We develop free open-source software, if you want to help us, please consider
-subscribing_.
+If you want to help us continue to develop free and open-source software, please
+consider subscribing_.
 
 .. _`contact us`: /contact
 .. _Haskus: /about
 .. _subscribing: /subscribe
 
-Projects we are working on
-==========================
+What we are working on
+======================
 
 
 .. |system_icon| image:: /images/system_small.png
@@ -26,7 +26,7 @@ Projects we are working on
    :target: /arduino
    :class: icon
 
-.. |system_text| replace:: Haskus system is a new framework that we are developing to
+.. |system_text| replace:: Haskus system is a framework that we are developing to
     perform system programming with only Haskell and the Linux kernel (the framework
     was previously called ViperVM).
 

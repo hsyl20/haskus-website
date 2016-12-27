@@ -1,6 +1,6 @@
 ---
-title: Haskus System
-section: Haskus System
+title: System
+section: System
 ---
 
 .. image:: /images/system.png
@@ -9,6 +9,10 @@ section: Haskus System
 Haskus system is a framework written in Haskell that can be used for system
 programming. The long-term aim is to provide a full Haskell user-space
 environment on top of the Linux kernel.
+
+You can see some demo_
+
+.. _demo: /system/demo
 
 Module Overview
 ===============
