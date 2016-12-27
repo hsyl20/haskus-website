@@ -5,9 +5,12 @@ section:
 
 Haskus_ is a software development company founded in 2016. Don't hesitate to
 `contact us`_ if you would like us to develop something for you!
+We develop free open-source software, if you want to help us, please consider
+subscribing_.
 
 .. _`contact us`: /contact
 .. _Haskus: /about
+.. _subscribing: /subscribe
 
 Projects we are working on
 ==========================
