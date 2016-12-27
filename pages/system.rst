@@ -14,6 +14,21 @@ You can see some demo_
 
 .. _demo: /system/demo
 
+The sources_
+
+.. _sources: http://github.com/haskus/haskus-system
+
+Get started
+-----------
+
+We use stack so you should only have to execute the following commands to build the project.
+
+.. code:: bash
+
+    > git clone http://github.com/haskus/haskus-system
+    > cd ViperVM
+    > stack build
+
 Module Overview
 ===============
 
