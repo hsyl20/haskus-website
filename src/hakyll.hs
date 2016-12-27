@@ -30,7 +30,7 @@ main = hakyll $ do
         compile copyFileCompiler
 
     -- home
-    match "pages/home.md" $ do
+    match "pages/home.rst" $ do
         route $ customRoute $ const "index.html"
         compile $ pandocCompiler
              >>= loadAndApplyTemplate "templates/page.html" defaultContext

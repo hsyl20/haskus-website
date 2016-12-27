@@ -187,7 +187,7 @@ article h1 {
     font-family: sans-serif;
     font-variant:small-caps;
     font-weight:500;
-	margin:0 0 0.5em 0;
+	margin:0.7em 0 0.7em 0;
 	color: #275176;
 	font-size:1.5em;
 }
@@ -396,5 +396,11 @@ pre {
     display:block;
     margin-left:auto;
     margin-right:auto;
-    width:300px;
+}
+
+.icon {
+    max-width: 150px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }

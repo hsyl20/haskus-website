@@ -3,6 +3,9 @@ title: GHC
 section: GHC
 ---
 
+.. image:: /images/haskell-logo.png
+   :class: logo
+
 GHC developments
 ================
 
@@ -15,7 +18,7 @@ Our contributions
 
 We have already fixed several bugs and added several features as you can see in
 the following list. If you need specific developments using GHC or to improve
-it, don't hesitate to `contact us`_. If you want us to continue to improve GHC,
+it, don't hesitate to `contact us`_. If you want to help us continue to improve GHC,
 consider subscribing_.
 
 .. _subscribing: /subscribe

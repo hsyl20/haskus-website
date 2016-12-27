@@ -5,4 +5,4 @@ section: Contact us
 
 # Contact us
 
-Don't hesite to get in touch with us: <a href="mailto:contact@haskus.fr">contact@haskus.fr</a>
+Get in touch with us by mail: <a href="mailto:contact@haskus.fr">contact@haskus.fr</a>
