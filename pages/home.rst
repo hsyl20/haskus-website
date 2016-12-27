@@ -32,7 +32,8 @@ Projects we are working on
 
 .. |ghc_text| replace:: We participate in the development of the main Haskell compiler (GHC). We add new features and we fix bugs.
 
-.. |arduino_text| replace:: We develop programs for the Arduino microcontroller
+.. |arduino_text| replace:: We develop programs for the Arduino microcontroller.
+
 
 
 +---------------------+----------------------------------------------------------+

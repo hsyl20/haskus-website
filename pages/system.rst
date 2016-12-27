@@ -64,4 +64,4 @@ Additional documentation
 * The book_ (still being written)
 
 .. _README: https://github.com/hsyl20/haskus-system/blob/master/README.md
-.. _book: /books/system
+.. _book: /books
