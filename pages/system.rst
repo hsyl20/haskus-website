@@ -13,14 +13,14 @@ environment on top of the Linux kernel.
 Get started
 -----------
 
-We use stack so you should only have to execute the following commands to build the project.
+We use ``stack`` so you should only have to execute the following commands to build the project.
 
 .. code:: bash
 
     > git clone http://github.com/haskus/haskus-system
-    > cd ViperVM
+    > cd haskus-system
+    > stack setup
     > stack build
-
 
 
 * Documentation_

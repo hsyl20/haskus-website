@@ -79,10 +79,10 @@ Ticket `#12877`_
 
 ------
 
-2016-11 -- `-fhide-source-paths` flag
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2016-11 -- ``-fhide-source-paths`` flag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We added a `-fhide-source-paths` flag to GHC to reduce the line noise when
+We added a ``-fhide-source-paths`` flag to GHC to reduce the line noise when
 compiling many modules.
   
 Tickets `#12807`_ and `#12851`_
@@ -124,7 +124,7 @@ Ticket `#12827`_
 Foreign primop imports were not checked if the given entity string was empty.
 The latter triggered an error in the assembler phase (jump to an empty label).
 We fixed this by using the function name as a label when the entity string is
-missing (the `ccall` convention has this behavior, in accordance with the
+missing (the ``ccall`` convention has this behavior, in accordance with the
 Haskell 2010 report).
 
 Ticket `#12355`_
@@ -176,13 +176,13 @@ Ticket `#11965`_
 
 ------
 
-2016-02 -- Use `timerfd` on Linux
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2016-02 -- Use ``timerfd`` on Linux
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 GHC runtime system (RTS) used alarm signals to implement green threads
 scheduling. Signals are problematic because they can interrupt system calls
 (syscalls) and the user-code can mess up with them. We modified GHC's RTS so
-that it uses the `timerfd` syscall on Linux instead of alarm signals.
+that it uses the ``timerfd`` syscall on Linux instead of alarm signals.
 
 Tickets `#10840`_
 
@@ -200,7 +200,7 @@ that weren't followed). We fixed this by making GHC follow the spec.
 
 GHC used "readelf" program to read the contents of this section back. It was
 problematic, especially with the previous fix so we replaced it with a direct
-extraction of the ELF section by using `Data.Binary.Get`
+extraction of the ELF section by using ``Data.Binary.Get``
 
 Tickets `#11022`_ and `#10974`_
 
@@ -227,11 +227,11 @@ Ticket `#10462`_
 
 GHC's runtime system linker needs to allocate memory in the low 2GB of the
 memory (so that 32-bit relative addresing can be used). GHC was using one
-`mmap` call per object in archive files (`.a`) wasting a lot of memory space
-(`mmap` allocates full memory pages even for small objects) and
-time (`mmap` call is costly).
+``mmap`` call per object in archive files (``.a``) wasting a lot of memory space
+(``mmap`` allocates full memory pages even for small objects) and
+time (``mmap`` call is costly).
 
-We implemented an allocator named `M32 allocator` that loads several objects
+We implemented an allocator named ``M32 allocator`` that loads several objects
 into the same memory page. Our code has been `manually merged by Simon Marlow`_
 into another patch that has been applied.
 
@@ -246,9 +246,9 @@ Ticket `#9314`_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 GHC can compile statically linked programs. However, the produced binary was
-infinitely looping if it couldn't find the `iconv` files (used to convert
+infinitely looping if it couldn't find the ``iconv`` files (used to convert
 between character sets). We stumbled on this while trying to use a static binary
-into an `initramfs` image. We helped in fixing this.
+into an ``initramfs`` image. We helped in fixing this.
 
 Tickets `#7695`_ and `#10298`_
 
