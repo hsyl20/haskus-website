@@ -10,7 +10,7 @@ GHC developments
    :class: logo
 
 
-At Haskus we contribute to the development of the main Haskell compiler: GHC_
+We contribute to the development of the main Haskell compiler: GHC_
 
 .. _GHC: http://www.haskell.org/ghc
 
