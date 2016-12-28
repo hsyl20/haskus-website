@@ -27,7 +27,7 @@ procfs, sysfs).
 Formats
 -------
 
-ViperVM provides support for some file formats (e.g., ELF, DWARF, CPIO) and some
+The framework provides support for some file formats (e.g., ELF, DWARF, CPIO) and some
 file system formats (e.g., ISO9660). These can be used to interact with Linux
 (e.g., to look up for functions in the vDSO ELF image), to build initramfs
 images or bootable disk images, etc.
@@ -35,9 +35,9 @@ images or bootable disk images, etc.
 Architectures
 -------------
 
-ViperVM provides architecture specific modules (currently only for x86-64), in
+The framework provides architecture specific modules (currently only for x86-64), in
 particular the thin architecture specific layer to call Linux system calls.
-Additionally, ViperVM has a dictionnary of x86 instructions; it is currently
+Additionally, the framework has a dictionnary of x86 instructions; it is currently
 used to implement a disassembler and could be used to implement assemblers,
 analyzers, emulators, etc. A wrapper for the x86's cpuid instruction is also
 provided.
@@ -45,7 +45,7 @@ provided.
 System interface
 ----------------
 
-ViperVM provides modules to interact with the system: input devices, display
+The framework provides modules to interact with the system: input devices, display
 devices, etc. These modules are used to easily build a custom system without
 dealing directly with the low-level Linux interface. It also provides a custom
 monad with common features for system programming (logging, etc.).
