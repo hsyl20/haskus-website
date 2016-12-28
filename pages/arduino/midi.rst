@@ -26,7 +26,7 @@ By interconnecting an Arduino (with the Olimex SHIELD-MIDI) between the
 accordion and the arranger, we have been able to map the accordion buttons to
 the required arranger functions. Our client is now able to switch to a
 control-mode (à la VI) on the accordion into which the note buttons can be used
-to select a variation, an ending, of the accompaniment.
+to select a variation or an ending of the accompaniment.
 
 The overall cost of the different parts was about 50€. It is cheaper and more
 versatile than the existing "MIDI event processors" (but it lacks a nice box).
