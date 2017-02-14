@@ -10,10 +10,9 @@ Examples & Demo
 2016-08-18 - First real boot (clock example)
 --------------------------------------------
 
-This is the first time I boot a Haskus system (called ViperVM at the time) based
-system on a real computer (an old notebook). I had to make a bootable CD because
-the computer doesn't seem to support bootable USB sticks. The system displays a
-clock dynamically rendered with ``Diagrams`` and its ``Rasterific`` backend. It uses
+This is the first time I boot a demo using Haskus system (called ViperVM at the
+time) on a real computer (an old notebook). The demo displays a clock
+dynamically rendered with ``Diagrams`` and its ``Rasterific`` backend. It uses
 Haskus system to directly access Linux's DRM subsystem from Haskell.
 
 .. raw:: html
