@@ -4,6 +4,8 @@ section: Documentation
 path0: system
 ---
 
+.. contents::
+
 Introduction
 ============
 
