@@ -3,9 +3,6 @@ title: GHC
 section: GHC
 ---
 
-GHC developments
-================
-
 .. image:: /images/haskell-logo.png
    :class: logo
 
@@ -13,6 +10,8 @@ GHC developments
 We contribute to the development of the main Haskell compiler: GHC_
 
 .. _GHC: http://www.haskell.org/ghc
+
+.. contents::
 
 Our contributions
 -----------------

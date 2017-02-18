@@ -12,7 +12,7 @@ Haskus System: Binary
 Haskus has a set of modules dedicated to the manipulation of binary data. They
 provide data type mapping those of other languages such as C and even more.
 
-All these modules are in [Haskus.Format.Binary](../../src/lib/Haskus/Format/Binary).
+All these modules are in `Haskus.Format.Binary <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary>`_.
 
 Haskus does not rely on external tools such as C2HS to provide bindings to C
 libraries. There are several reasons for that:
@@ -31,7 +31,7 @@ useful things to make this process easy.
 Word, Int
 ---------
 
-The [Word module](../../src/lib/Haskus/Format/Binary/Word.hs) contains data
+The `Word module <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary/Word.hs>`_ contains data
 types representing unsigned words (Word8, Word16, Word32, etc.) and signed
 integers (Int8, Int16, Int32, etc.). It also contains some C types such as
 CSize, CShort, CUShort, CLong, CULong, etc.
@@ -41,7 +41,7 @@ Endianness
 
 Words and Ints are stored (i.e., read and written) using host endianness (byte
 ordering). `AsBigEndian` and `AsLittleEndian` data types in the
-[Endianness module](../../src/lib/Haskus/Format/Binary/Endianness.hs)
+`Endianness module <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary/Endianness.hs>`_
 allow you to force a different endianness.
 
 The following example shows a data type containing a field for each endianness
@@ -70,13 +70,13 @@ depending on the host endianness.
 Bits
 ----
 
-The [Bits module](../../src/lib/Haskus/Format/Binary/Bits.hs) allows you to
+The `Bits module <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary/Bits.hs>`_ allows you to
 perform bitwise operations on data types supporting them.
 
 Buffer
 ------
 
-A [Buffer](../../src/lib/Haskus/Format/Binary/Buffer.hs) is basically a strict
+A `Buffer <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary/Buffer.hs>`_ is basically a strict
 ByteString with a better name and a better integration with Storable type class.
 
 Structures
@@ -99,9 +99,10 @@ You map C data structures with Haskell data type as follows:
 
 
 The Storable instance handles the alignment of the field as a C non-packed
-structure would (i.e. there are 7 padding bytes between xField0 and xField1).
+structure would (i.e. there are 7 padding bytes between ``xField0`` and
+``xField1``).
 
-`peek` and `poke` can be used to read and write the data structure in memory.
+``peek`` and ``poke`` can be used to read and write the data structure in memory.
 
 Nesting
 ~~~~~~~

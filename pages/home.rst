@@ -35,7 +35,6 @@ What we are working on
 .. |arduino_text| replace:: We develop programs for the Arduino microcontroller.
 
 
-
 +---------------------+----------------------------------------------------------+
 | |system_icon|       | |system_text|                                            |
 +---------------------+----------------------------------------------------------+
