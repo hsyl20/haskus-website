@@ -1,7 +1,7 @@
 name:                sitehaskus
 version:             0.1.0.0
 author:              Sylvain HENRY
-maintainer:          hsyl20@gmail.com
+maintainer:          sylvain@haskus.fr
 build-type:          Simple
 cabal-version:       >=1.10
 
