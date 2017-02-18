@@ -1,17 +1,16 @@
 all: build
 
 build: hakyll
-	./hakyll build
+	stack exec -- sitehaskus build
 
-hakyll: hakyll.hs
-	cabal exec ghc -- --make hakyll.hs
-	./hakyll clean
+hakyll: src/hakyll.hs
+	stack build
 
 new:
 	@./new_post.sh
 
 watch: hakyll
-	./hakyll watch -p 9000
+	stack exec -- sitehaskus watch --port 9000
 
 clean: hakyll
-	./hakyll clean
+	stack clean

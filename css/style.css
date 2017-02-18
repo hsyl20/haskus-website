@@ -419,3 +419,14 @@ pre {
     margin-left:auto;
     margin-right:auto;
 }
+
+article table {
+   border: 1px gray solid;
+   border-collapse: collapse;
+   margin: auto;
+}
+
+article table td {
+   border: 1px gray solid;
+   text-align: center;
+}

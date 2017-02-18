@@ -4,51 +4,25 @@ section: Documentation
 path0: system
 ---
 
+Haskus System is a framework written in Haskell that can be used for system
+programming. Fundamentally it is an experiment into providing an integrated
+interface leveraging Haskell features (type-safety, STM, etc.) for the whole
+system: input, display, sound, network, etc.
 
-Module Overview
-===============
+It is based directly and only on the Linux kernel:
 
-Binary modules
---------------
+* it doesn't contain any kernel level code (device driver, etc.)
 
-Haskus system handles low-level data structures in memory such as C structs,
-unions, enums, bit fields, etc. It doesn't depend on C header files (.h) and
-doesn't use preprocessors (cpp2hs, hsc2hs, etc.).
+* it doesn't rely on usual interfaces (e.g., libdrm, libinput, X11, wayland,
+  etc.) to communicate with the kernel
 
-Interface with the Linux kernel
--------------------------------
+Note that it still depends on GHC's RTS dependencies (libc, etc.).
 
-Haskus system provides foreign primops to call Linux system calls from Haskell
-code without going through the libc. In addition to basic system calls, it
-provides wrappers for some Linux subsystems/features accessible through
-multiplexing syscalls (e.g., ioctl) or through specific file systems (e.g.,
-procfs, sysfs).
+Contents
+--------
 
-Formats
--------
-
-The framework provides support for some file formats (e.g., ELF, DWARF, CPIO) and some
-file system formats (e.g., ISO9660). These can be used to interact with Linux
-(e.g., to look up for functions in the vDSO ELF image), to build initramfs
-images or bootable disk images, etc.
-
-Architectures
--------------
-
-The framework provides architecture specific modules (currently only for x86-64), in
-particular the thin architecture specific layer to call Linux system calls.
-Additionally, the framework has a dictionnary of x86 instructions; it is currently
-used to implement a disassembler and could be used to implement assemblers,
-analyzers, emulators, etc. A wrapper for the x86's cpuid instruction is also
-provided.
-
-System interface
-----------------
-
-The framework provides modules to interact with the system: input devices, display
-devices, etc. These modules are used to easily build a custom system without
-dealing directly with the low-level Linux interface. It also provides a custom
-monad with common features for system programming (logging, etc.).
+1. `Introduction <manual/intro>`_
+1. `Modules overview <manual/modules_overview>`_
 
 
 Additional documentation
@@ -58,5 +32,5 @@ Additional documentation
 * README_ in the sources
 * The book_ (still being written)
 
-.. _README: https://github.com/hsyl20/haskus-system/blob/master/README.md
+.. _README: https://github.com/haskus/haskus-system/blob/master/README.md
 .. _book: /books
