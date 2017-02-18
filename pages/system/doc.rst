@@ -9,20 +9,17 @@ programming. Fundamentally it is an experiment into providing an integrated
 interface leveraging Haskell features (type-safety, STM, etc.) for the whole
 system: input, display, sound, network, etc.
 
-It is based directly and only on the Linux kernel:
-
-* it doesn't contain any kernel level code (device driver, etc.)
-
-* it doesn't rely on usual interfaces (e.g., libdrm, libinput, X11, wayland,
-  etc.) to communicate with the kernel
-
-Note that it still depends on GHC's RTS dependencies (libc, etc.).
-
 Contents
 --------
 
 1. `Introduction <manual/intro>`_
-1. `Modules overview <manual/modules_overview>`_
+
+   1. `Modules overview <manual/modules_overview>`_
+
+#. `Building and Booting a System <manual/booting>`_
+
+   1. `Building user-space programs <manual/booting/user_space>`_
+
 
 
 Additional documentation

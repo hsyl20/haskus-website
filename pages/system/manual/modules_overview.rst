@@ -17,7 +17,7 @@ unions, enums, bit fields, etc. It doesn't depend on C header files (.h) and
 doesn't use preprocessors (cpp2hs, hsc2hs, etc.).
 
 * Haskus.Format.Binary: modules to manipulate binary data and to easily
-  create C bindings (see the `documentation <binary>`_)
+  create C bindings (see the `binary documentation <binary>`_)
 
 Interface with the Linux kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,7 +55,7 @@ currently used to implement a disassembler and could be used to implement
 assemblers, analyzers, emulators, etc. A wrapper for the x86's cpuid
 instruction is also provided.
 
-* Haskus.Arch.X86_64: Currently only X86-64 is supported (`documentation <x86>`_)
+* Haskus.Arch.X86_64: Currently only X86-64 is supported (`x86 documentation <x86>`_)
 
   * Haskus.Arch.X86_64.ISA: instruction set architecture
   * Haskus.Arch.X86_64.Disassembler

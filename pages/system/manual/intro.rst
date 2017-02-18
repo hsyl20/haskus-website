@@ -9,7 +9,7 @@ path0: system
 Introduction
 ============
 
-A typical system can be roughly split into three layers:
+A typical operatin system can be roughly split into three layers:
 
 * Kernel: device drivers, virtual memory management, process scheduling,
   etc.
@@ -28,7 +28,7 @@ The Haskus system is based directly and exclusively on the Linux kernel. Hence,
 * it doesn't rely on usual user-space kernel interfaces (e.g., libdrm, libinput,
   X11, wayland, etc.) to communicate with the kernel
 
-Note however that programs using the haskus system are compiled with the GHC:
+Note however that programs using the haskus system are compiled with GHC:
 hence they still depend on GHC's runtime system (RTS) dependencies (libc, etc.).
 Programs are statically compiled to embed those dependencies.
 
@@ -53,7 +53,7 @@ The second aim is to make system programming more enjoyable and productive by
 using a high-level language (Haskell) and by providing a hopefully coherent and
 well-documented framework with interfaces that are easy to use.
 
-Applications
-------------
+Application
+-----------
 
-It is up to you to decide if your system has the concept of "applications".
+It is up to you to decide if your system has the concept of "application"!
