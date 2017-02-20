@@ -22,7 +22,7 @@ unions, enums, bit fields, etc. Deliberately it doesn't depend on C header files
 * `Haskus.Format.Binary
   <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary>`_:
   modules to manipulate binary data and to easily create C bindings (see the
-  `binary documentation <binary>`_)
+  `binary documentation </system/manual/binary>`_)
 
 Interface with the Linux kernel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -60,7 +60,9 @@ currently used to implement a disassembler and could be used to implement
 assemblers, analyzers, emulators, etc. A wrapper for the x86's cpuid
 instruction is also provided.
 
-* `Haskus.Arch.X86_64 <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Arch/X86_64>`_: Currently only X86-64 is supported (`x86 documentation <x86>`_)
+* `Haskus.Arch.X86_64
+  <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Arch/X86_64>`_:
+  Currently only X86-64 is supported (`x86 documentation </system/manual/x86>`_)
 
   * `Haskus.Arch.X86_64.ISA <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Arch/X86_64/ISA>`_: instruction set architecture
   * `Haskus.Arch.X86_64.Disassembler <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Arch/X86_64/Disassembler.hs>`_
