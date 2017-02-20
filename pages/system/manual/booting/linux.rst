@@ -4,8 +4,8 @@ section: Documentation
 path0: system
 ---
 
-Building Linux
-==============
+Building the Linux kernel
+=========================
 
 The Linux kernel is required to execute systems using ``haskus-system``. Leaving
 aside modules and firmwares, a compiled Linux kernel is a single binary file
