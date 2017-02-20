@@ -39,7 +39,7 @@ We recommande the following options for ``QEMU``:
 
    # redirect the guest Linux console on the host terminal
    -serial stdio
-   -append "console=ttyS0 atkbd.softraw=0"
+   -append "console=ttyS0"
 
    # enable better sound device
    -soundhw "hda"
