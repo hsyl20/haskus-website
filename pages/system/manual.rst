@@ -26,7 +26,7 @@ Contents
 
 #. `High-level interfaces </system/manual/using>`_
    1. `The Sys monad </system/manual/using/sys_monad>`_
-   1. `Device management </system/manual/using/devices>`_
+   1. `Device management (basics) </system/manual/using/devices>`_
 
 #. Appendices
 
