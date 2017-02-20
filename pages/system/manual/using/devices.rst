@@ -299,22 +299,22 @@ File descriptor
 ~~~~~~~~~~~~~~~
 
 Linux allows programs in user-space to have handles on kernel objects.
-Suppose the kernel has an object $A$ and a reference $R_A$ on $A$.  Instead of
-directly giving $R_A$ to user-space processes, the kernel maintains a
-per-process array of kernel object references: $D_{pid}$ for the process with
-the \texttt{pid} identifier.  To "give" $R_A$ to this process, the kernel finds
-an empty cell in $D_{pid}$, put $R_A$ in it and gives the index of the cell to
+Suppose the kernel has an object ``A`` and a reference ``R_A`` on ``A``.  Instead of
+directly giving ``R_A`` to user-space processes, the kernel maintains a
+per-process array of kernel object references: ``D_pid`` for the process with
+the ``pid`` identifier.  To "give" ``R_A`` to this process, the kernel finds
+an empty cell in ``D_pid``, put ``R_A`` in it and gives the index of the cell to
 the process.
 
-For historical reasons, the cell index is called a \emph{file descriptor} and
-$D_{pid}$ a \emph{file descriptor table} even if in Linux they can be used for
-kernel objects that are not files (e.g., clocks, memory).  User-space processes
-can only refer to kernel objects through this indirect reference. Note that the
-file descriptor table is specific to each process: sharing a file descriptor
-with another process does not allow to share the referred kernel object.
+For historical reasons, the cell index is called a file descriptor and ``D_pid``
+a file descriptor table even if in Linux they can be used for kernel objects
+that are not files (e.g., clocks, memory). User-space processes can only refer
+to kernel objects through theses indirect references. Note that the file
+descriptor table is specific to each process: sharing a file descriptor with
+another process does not allow to share the referred kernel object.
 
-In Haskus System we use the term "handle" instead of "file descriptor" as we find it
-more descriptive.
+In ``haskus-system`` we use the term "handle" instead of "file descriptor" as we
+find it more descriptive.
 
 Further reading
 ---------------
