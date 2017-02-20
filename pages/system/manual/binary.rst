@@ -6,16 +6,17 @@ path0: system
 
 .. contents::
 
-Haskus System: Binary
-=====================
+Binary modules
+==============
 
-Haskus has a set of modules dedicated to the manipulation of binary data. They
-provide data type mapping those of other languages such as C and even more.
+``haskus-system`` has a set of modules dedicated to the manipulation of binary
+data. They provide data type mapping those of other languages such as C and even
+more.
 
 All these modules are in `Haskus.Format.Binary <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary>`_.
 
-Haskus does not rely on external tools such as C2HS to provide bindings to C
-libraries. There are several reasons for that:
+``haskus-system`` does not rely on external tools such as C2HS to provide
+bindings to C libraries. There are several reasons for that:
 
 * We don't want to depend on .h files;
 * .h files often contain pecularities that are difficult to handle
@@ -25,8 +26,8 @@ libraries. There are several reasons for that:
     * Very low-level (e.g. #define are not transformed into datatypes with Enum
       instances)
 
-Instead Haskus lets you write bindings in pure Haskell code and provides many
-useful things to make this process easy.
+Instead ``haskus-system`` lets you write bindings in pure Haskell code and
+provides many useful things to make this process easy.
 
 Word, Int
 ---------
@@ -40,8 +41,9 @@ Endianness
 ~~~~~~~~~~
 
 Words and Ints are stored (i.e., read and written) using host endianness (byte
-ordering). `AsBigEndian` and `AsLittleEndian` data types in the
-`Endianness module <http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary/Endianness.hs>`_
+ordering). ``AsBigEndian`` and ``AsLittleEndian`` data types in the `Endianness
+module
+<http://github.com/haskus/haskus-system/tree/master/src/lib/Haskus/Format/Binary/Endianness.hs>`_
 allow you to force a different endianness.
 
 The following example shows a data type containing a field for each endianness
@@ -58,13 +60,10 @@ this document.
 
 
 We can also explicitly change the endianness with the following methods:
-* hostToBigEndian
-* hostToLittleEndian
-* bigEndianToHost
-* littleEndianToHost
-* reverseBytes
+``hostToBigEndian``, ``hostToLittleEndian``, ``bigEndianToHost``,
+``littleEndianToHost``, ``reverseBytes``.
 
-Each of these methods is either equivalent to `id` or to `reverseBytes`
+Each of these methods is either equivalent to ``id`` or to ``reverseBytes``
 depending on the host endianness.
 
 Bits
@@ -119,8 +118,8 @@ Data structures can be nested:
 Arrays (or Vectors)
 ~~~~~~~~~~~~~~~~~~~
 
-Haskus supports vectors: a fixed amount of Storable data correctly aligned. You
-can define a vector as follows:
+``haskus-system`` supports vectors: a fixed amount of Storable data correctly
+aligned. You can define a vector as follows:
 
 .. code:: haskell
 
@@ -266,8 +265,9 @@ We often use flags that are combined in a single word. Each flag is associated
 to a bit of the word: if the bit is set the flag is active, otherwise the flag
 isn't active.
 
-Haskus uses the CBitSet class to get the bit offset of each flag. By default,
-it uses the Enum instance to get the bit offsets as in the following example:
+``haskus-system`` uses the ``CBitSet`` class to get the bit offset of each flag.
+By default, it uses the Enum instance to get the bit offsets as in the following
+example:
 
 .. code:: haskell
 
@@ -326,8 +326,8 @@ Unions
 ~~~~~~
 
 An union provides several ways to access the same buffer of memory. To use them
-with Haskus, you need to give the list of available representations in a type
-as follows:
+with ``haskus-system``, you need to give the list of available representations
+in a type as follows:
 
 .. code:: haskell
 
