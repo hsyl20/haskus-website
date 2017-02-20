@@ -6,7 +6,7 @@ section: System
 .. image:: /images/system.png
    :class: logo
 
-Haskus system is a framework written in Haskell that can be used for system
+``haskus-system`` is a framework written in Haskell that can be used for system
 programming. The long-term aim is to provide a full Haskell user-space
 environment on top of the Linux kernel.
 

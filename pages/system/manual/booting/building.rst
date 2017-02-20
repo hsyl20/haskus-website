@@ -4,10 +4,10 @@ section: Documentation
 path0: system
 ---
 
-Building user-space programs
-----------------------------
+Building systems
+----------------
 
-Suppose we have the following HelloWorld system code and that we
+Suppose we have the following ``HelloWorld`` system code and that we
 want to build it.
 
 .. code:: haskell
@@ -45,8 +45,8 @@ in the previous extract of the ``.cabal`` file (the ``extra-lib-dirs`` entry)
 and modify it so that the given path points to a directory containing the static
 libraries.
 
-Finally, we recommend using ``stack`` to ensure that you are using
-appropriate GHC and Haskus system. Example of ``stack.yaml`` contents:
+Finally, we recommend using ``stack`` to ensure that you are using appropriate
+versions of GHC and of ``haskus-system``. Example of ``stack.yaml`` contents:
 
 .. code:: yaml
 
@@ -65,7 +65,11 @@ appropriate GHC and Haskus system. Example of ``stack.yaml`` contents:
 
 Finally use ``stack build`` to compile the program.
 
+Examples
+--------
+
 The `haskus-system-examples
 <http://www.github.com/haskus/haskus-system-examples>`_ repository contains
 several examples of such systems (including this ``HelloWorld`` program).
 
+Refer to its `.cabal file <http://github.com/haskus/haskus-system-examples/tree/master/haskus-system-examples.cabal>`_ and to its `stack.yaml <https://github.com/haskus/haskus-system-examples/tree/master/stack.yaml>`_ file.

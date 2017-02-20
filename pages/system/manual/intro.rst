@@ -9,7 +9,7 @@ path0: system
 Introduction
 ============
 
-A typical operatin system can be roughly split into three layers:
+A typical operating system can be roughly split into three layers:
 
 * Kernel: device drivers, virtual memory management, process scheduling,
   etc.
@@ -21,9 +21,9 @@ A typical operatin system can be roughly split into three layers:
 Kernel
 ------
 
-The Haskus system is based directly and exclusively on the Linux kernel. Hence,
+``haskus-system`` is based directly and exclusively on the Linux kernel. Hence,
 
-* it doesn't contain any kernel level code (device driver, etc.)
+* it doesn't contain low-level kernel code (device driver, etc.)
 
 * it doesn't rely on usual user-space kernel interfaces (e.g., libdrm, libinput,
   X11, wayland, etc.) to communicate with the kernel
@@ -35,7 +35,7 @@ Programs are statically compiled to embed those dependencies.
 System
 ------
 
-The first aim of the Haskus System framework is to make it easy to experiment
+The first aim of the ``haskus-system`` framework is to make it easy to experiment
 different approaches at the "system" level (which obviously has an impact on the
 "application" level). In particular, we would like to be able to easily revisit
 long-standing concepts, such as:

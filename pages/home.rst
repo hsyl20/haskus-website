@@ -26,7 +26,7 @@ What we are working on
    :target: /arduino
    :class: icon
 
-.. |system_text| replace:: Haskus system is a framework that we are developing to
+.. |system_text| replace:: ``haskus-system`` is a framework that we are developing to
     perform system programming with only Haskell and the Linux kernel (the framework
     was previously called ViperVM).
 
