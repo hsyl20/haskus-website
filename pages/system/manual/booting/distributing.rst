@@ -121,7 +121,7 @@ To create a bootable CD-ROM, you first need to create a ``.iso`` disk image with
       -o mydisk.iso                    # output ISO file
       -c boot/syslinux/boot.cat        # create boot catalog
       -b boot/syslinux/isolinux.bin    # bootable binary file
-      -no-emul-boot                    # doesn't use legacy floppy emulation
+      -no-emul-boot                    # does not use legacy floppy emulation
       -boot-info-table                 # write additional Boot Info Table (required by SysLinux)
       -boot-load-size 4
       -isohybrid-mbr syslinux-6.03/bios/mbr/isohdpfx_c.bin  # hybrid ISO
