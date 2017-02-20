@@ -7,9 +7,9 @@ path0: system
 Creating ramdisks
 =================
 
-To easily execute a system with the ``Linux`` kernel, the easiest way is to
-create a ramdisk: an image of the filesystem containing your system (basically a
-``zip`` file).
+To execute a system with the ``Linux`` kernel, the easiest way is to create a
+ramdisk: an image of the file-system containing your system (basically a ``zip``
+file).
 
 To do that, put your system files into a directory ``/path/to/my/system``. Then
 execute:

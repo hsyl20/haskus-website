@@ -28,7 +28,7 @@ also create a ``.iso`` image to burn on a CD-ROM (or to distribute online).
 Downloading Syslinux
 --------------------
 
-You first need to download an unpack the Syslinux boot-loader:
+You first need to download and unpack the Syslinux boot-loader:
 
 .. code:: bash
 
@@ -41,26 +41,26 @@ Creating the disk directory
 
 You need to execute the following steps to create your disk directory:
 
-Create the disk directories:
+Create some directories:
 
 .. code:: bash
 
    mkdir -p /my/disk/boot/syslinux
 
-Copy Syslinux in it:
+Copy Syslinux:
 
 .. code:: bash
 
    find syslinux-6.03/bios *.c32 -exec cp {} /my/disk/boot/syslinux ;
    cp syslinux-6.03/bios/core/isolinux.bin /my/disk/boot/syslinux/
 
-Copy the `Linux kernel </system/manual/booting/linux>`_ in it:
+Copy the `Linux kernel </system/manual/booting/linux>`_:
 
 .. code:: bash
 
    cp linux-4.9.8.bin /my/disk/boot/
 
-Copy the `system ramdisk </system/manual/booting/ramdisk>`_ in it:
+Copy the `system ramdisk </system/manual/booting/ramdisk>`_:
 
 .. code:: bash
 
@@ -106,7 +106,7 @@ Then you have to copy the contents of the disk directory on it:
    cp -rf /my/disk/* /mnt/SOMEWHERE
    sudo umount /mnt/SOMEWHERE
 
-Now your device should be bootable!
+Now your device should be bootable with your system!
 
 
 Creating a bootable CD-ROM
@@ -127,7 +127,8 @@ To create a bootable CD-ROM, you first need to create a ``.iso`` disk image with
       -isohybrid-mbr syslinux-6.03/bios/mbr/isohdpfx_c.bin  # hybrid ISO
       /my/disk
 
-It should create a ``mydisk.iso`` file that you can burn on a CD or distribute.
+It should create a ``mydisk.iso`` file that you can burn on a CD or distribute
+online.
 
 Automated method
 ================
@@ -160,5 +161,4 @@ You can also directly create an ISO image and test it with QEMU:
 
    ./build.sh iso/Demo
 
-This is the best way we have found to test the Syslinux configuration in a
-virtual environment.
+This is a good way to test the Syslinux configuration in a virtual environment.
