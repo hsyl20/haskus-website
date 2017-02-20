@@ -60,8 +60,7 @@ versions of GHC and of ``haskus-system``. Example of ``stack.yaml`` contents:
      extra-dep: true
    
    ghc-options:
-      "*": -freduction-depth=0
-
+      "haskus-system": -freduction-depth=0 -fobject-code
 
 Finally use ``stack build`` to compile the program.
 
