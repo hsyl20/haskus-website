@@ -18,15 +18,16 @@ sequence:
 4. Kernel (e.g., Linux)
 5. System (e.g., /init)
 
-In our case, systems (step 5 of the boot sequence) are user-space programs
-written in Haskell and using the ``haskus-system``. You first need to learn how
-to `build them <booting/building>`_.
+You first need to learn how to `build your own systems <booting/building>`_:
+these are user-space programs written in Haskell and using the ``haskus-system``
+which are compiled statically.
 
-To `test your systems <booting/QEMU>`_ with ``QEMU`` you need to `build a Linux
-kernel <booting/linux>`_.  We also recommend that you `put your system into a
-ramdisk <booting/ramdisk>`_ first.
+Then you need to `build a Linux kernel <booting/linux>`_ and to `put your
+systems into ramdisks <booting/ramdisk>`_.
 
-To distribute your systems, you need a boot-loader such as ``Syslinux``.
+Finally you can `test your systems <booting/QEMU>`_ with ``QEMU`` and
+`distribute them <booting/distributing>`_ on physical devices (USB sticks,
+CD-ROM) or online (as ``.iso`` images).
 
 Automated method
 ----------------
