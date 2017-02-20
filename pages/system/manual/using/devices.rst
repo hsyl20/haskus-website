@@ -209,21 +209,21 @@ pass to every function applicable to it. The following code shows how to do it.
       void powerOff
 
 
-This code reads a 64-bit word from the "urandom" device that returns random data
-and another from the "zero" device that returns bytes set to null. Finally, we
-write a string into the "null" device that discards what is written into it.
+This code reads a 64-bit word from the ``urandom`` device that returns random data
+and another from the ``zero`` device that returns bytes set to 0. Finally, we
+write a string into the ``null`` device that discards what is written into it.
 These three devices are virtual and are always available with Linux's default
 configuration.
 
 Device Specific Interfaces
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the previous code example we have used read and write methods as if the
 device handle had been a normal file handle. Indeed Linux device drivers define
 the operational semantics they want to give to each system call applicable to a
 file handle: ``read``, ``write``, ``fseek``, ``mmap``, ``close``, etc. Some
 system calls may be invalid with some device handles (e.g., ``write`` with the
-"urandom" driver).
+``urandom`` driver).
 
 This gives a weak unified interface to device drivers: the system calls are the
 same but the operational semantics depends on the driver. Moreover there are a
@@ -247,9 +247,9 @@ Implementation notes
 --------------------
 
 Internally ``haskus-system`` mounts a ``sysfs`` virtual file system through
-which the Linux kernel exposes the hardware of the machine.  Each device is
-exposed as a sub-directory in the ``/devices`` directory and the path to the
-device's directory uniquely identifies the device in the system.
+which the Linux kernel exposes the hardware of the machine. In this file-system
+each device is exposed as a sub-directory in the ``/devices`` directory and the
+path to the device's directory uniquely identifies the device in the system.
 
 Directory nesting represents the device hierarchy as the system sees it.
 Regular files in device directories represent device properties that can be
