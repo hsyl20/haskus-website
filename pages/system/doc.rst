@@ -20,7 +20,9 @@ Contents
 
    1. `Building systems <manual/booting/building>`_
    1. `Creating ramdisks <manual/booting/ramdisk>`_
+   1. `Building Linux <manual/booting/linux>`_
    1. `Testing with QEMU <manual/booting/QEMU>`_
+   1. `Distributing your system <manual/booting/distributing>`_
 
 
 

@@ -22,9 +22,9 @@ In our case, systems (step 5 of the boot sequence) are user-space programs
 written in Haskell and using the ``haskus-system``. You first need to learn how
 to `build them <booting/building>`_.
 
-To `test your systems <booting/QEMU>`_ with ``QEMU`` you need to build a
-``Linux`` kernel. We also recommend that you `put your system into a ramdisk
-<booting/ramdisk>`_ first.
+To `test your systems <booting/QEMU>`_ with ``QEMU`` you need to `build a Linux
+kernel <booting/linux>`_.  We also recommend that you `put your system into a
+ramdisk <booting/ramdisk>`_ first.
 
 To distribute your systems, you need a boot-loader such as ``Syslinux``.
 

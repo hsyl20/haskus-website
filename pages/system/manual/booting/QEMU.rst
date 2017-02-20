@@ -11,7 +11,7 @@ To test a system with QEMU, we recommend that you first `build a ramdisk
 <ramdisk>`_ containing it, say ``myimage.img``. We suppose your system (i.e.,
 the user-space program) is stored in ``/my/system`` in the ramdisk.
 
-You also need to build a recent ``Linux`` kernel, say ``linux.bin``.
+You also need to `build a recent Linux kernel <linux>`_, say ``linux.bin``.
 
 To launch ``QEMU``, use the following command line:
 
