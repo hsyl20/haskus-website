@@ -24,7 +24,7 @@ To launch ``QEMU``, use the following command line:
       -initrd myimage.img
       -append "rdinit=/my/system"
 
-We recommande the following options for ``QEMU``:
+We recommend the following options for ``QEMU``:
 
 .. code:: bash
 
