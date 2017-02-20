@@ -16,19 +16,25 @@ Contents
 
    1. `Discussing the approach </system/manual/approach>`_
 
-#. `Building and Booting a System </system/manual/booting>`_
+#. `Building and booting a System </system/manual/booting>`_
 
    1. `Building systems </system/manual/booting/building>`_
-   1. `Creating ramdisks </system/manual/booting/ramdisk>`_
-   1. `Building Linux </system/manual/booting/linux>`_
-   1. `Testing with QEMU </system/manual/booting/QEMU>`_
-   1. `Distributing your system </system/manual/booting/distributing>`_
+   #. `Creating ramdisks </system/manual/booting/ramdisk>`_
+   #. `Building Linux </system/manual/booting/linux>`_
+   #. `Testing with QEMU </system/manual/booting/QEMU>`_
+   #. `Distributing your system </system/manual/booting/distributing>`_
+
+#. `High-level interfaces </system/manual/using>`_
+   1. `The Sys monad </system/manual/using/sys_monad>`_
+   1. `Device management </system/manual/using/devices>`_
 
 #. Appendices
 
    1. `Modules overview </system/manual/modules_overview>`_
-   1. `Binary modules </system/manual/binary>`_
    1. `x86 architecture notes </system/manual/x86>`_
+   1. `Binary modules </system/manual/binary>`_
+   1. Variant/Flow
+
 
 
 
@@ -37,8 +43,3 @@ Additional documentation
 ========================
 
 * API documentation can be built with "stack haddock" in the sources
-* README_ in the sources
-* The book_ (still being written)
-
-.. _README: https://github.com/haskus/haskus-system/blob/master/README.md
-.. _book: /books
