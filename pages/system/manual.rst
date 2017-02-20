@@ -14,6 +14,8 @@ Contents
 
 1. `Introduction </system/manual/intro>`_
 
+   1. `Discussing the approach </system/manual/approach>`_
+
 #. `Building and Booting a System </system/manual/booting>`_
 
    1. `Building systems </system/manual/booting/building>`_
