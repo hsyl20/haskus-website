@@ -9,7 +9,8 @@ Building Linux
 
 The Linux kernel is required to execute systems using ``haskus-system``. Leaving
 aside modules and firmwares, a compiled Linux kernel is a single binary file
-that you can `use with QEMU <QEMU>`_ to execute your own systems.
+that you can `use with QEMU </system/manual/booting/QEMU>`_ to execute your own
+systems.
 
 To build Linux, you first need to download it from `<http://kernel.org>`_ and to unpack
 it:
@@ -49,8 +50,8 @@ Finally, build the kernel with:
 
    make -j8
 
-Copy the resulting kernel binary that you can `use with QEMU <QEMU>`_ for
-instance:
+Copy the resulting kernel binary that you can `use with QEMU
+</system/manual/booting/QEMU>`_ for instance:
 
 .. code:: bash
 

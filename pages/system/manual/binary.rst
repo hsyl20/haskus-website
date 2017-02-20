@@ -130,7 +130,7 @@ can define a vector as follows:
    
    v :: Vector 5 Word16
 
-Vectors are storable, so you can `peek` and `poke` them from memory.
+Vectors are storable, so you can ``peek`` and ``poke`` them from memory.
 Alternatively, you can create them from a list:
 
 
@@ -172,7 +172,7 @@ You can concatenate several vectors into a single one:
    fromList [1,2,3,4,5,6,7,8,9]
 
 
-You can also safely `drop` or `take` elements in a vector. You can also `index` into a vector:
+You can also safely ``drop`` or ``take`` elements in a vector. You can also ``index`` into a vector:
 
 
 .. code:: haskell
@@ -223,7 +223,7 @@ starting from 0, you can do:
 
 
 If the values are not consecutive or don't start from 0, you can write your own
-`CEnum` instance:
+``CEnum`` instance:
 
 .. code:: haskell
 
@@ -257,7 +257,7 @@ To create or extract an EnumField, use the methods:
 
 We use a CEnum class that is very similar to Enum because Enum is a special
 class that has access to data constructor tags. If we redefine Enum, we cannot
-use `fromEnum` to get the data constructor tag.
+use ``fromEnum`` to get the data constructor tag.
 
 Bit sets (or "flags")
 ~~~~~~~~~~~~~~~~~~~~~
@@ -339,9 +339,9 @@ as follows:
    u :: Union '[Word8, Word64, Vector 5 Word16]
 
 Unions are storable so you can use them as fields in storable structures or
-you can directly `peek`/`poke` them.
+you can directly ``peek``/``poke`` them.
 
-You can retrieve a member of the union with `fromUnion`.  The extracted type
+You can retrieve a member of the union with ``fromUnion``.  The extracted type
 must be a member of the union otherwise it won't compile.
 
 .. code:: haskell
@@ -351,7 +351,7 @@ must be a member of the union otherwise it won't compile.
    fromUnion u :: Vector 5 Word16
    fromUnion u :: Word32 -- won't compile!
 
-To create a new union from one of its member, use `toUnion` or `toUnionZero`.
+To create a new union from one of its member, use ``toUnion`` or ``toUnionZero``.
 The latter sets the remaining bytes of the buffer to 0. In the example, the union
 uses 10 bytes (5 * 2 for Vector 5 Word16) and we write 8 bytes (sizeOf Word64)
 hence there are two bytes that can be left uninitialized (toUnion) or set to 0
@@ -443,8 +443,8 @@ Fields can also be 'BitSet' or 'EnumField':
 BitFields are storable and can be used in storable structures.
 
 You can easily pattern-match on all the fields at the same time with
-`matchFields` and `matchNamedFields`. It creates a tuple containing one value
-(and its name with `matchNamedFields`) per field.
+``matchFields`` and ``matchNamedFields``. It creates a tuple containing one value
+(and its name with ``matchNamedFields``) per field.
 
 .. code:: haskell
 

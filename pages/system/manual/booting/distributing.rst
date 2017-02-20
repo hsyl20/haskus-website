@@ -9,15 +9,16 @@ Distributing your system
 
 To distribute your systems, we will create a directory ``/my/disk`` containing:
 
-* your `system <building>`_ (in a `ramdisk <ramdisk>`_)
-* the `Linux kernel <linux>`_
+* your `system </system/manual/booting/building>`_ (in a `ramdisk
+  </system/manual/booting/ramdisk>`_)
+* the `Linux kernel </system/manual/booting/linux>`_
 * the boot-loader files (including its configuration)
 
-A boot-loader is needed as it loads `Linux <linux>`_ and the `ramdisk containing
-your system <ramdisk>`_. We use the `Syslinux <http://syslinux.org>`_
-boot-loader but you can use others such as GRUB. Note that you don't need a
-boot-loader when you `test your system with QEMU <QEMU>`_ because QEMU acts as a
-boot-loader itself.
+A boot-loader is needed as it loads `Linux </system/manual/booting/linux>`_ and
+the `ramdisk containing your system </system/manual/booting/ramdisk>`_. We use
+the `Syslinux <http://syslinux.org>`_ boot-loader but you can use others such as
+GRUB. Note that you don't need a boot-loader when you `test your system with
+QEMU </system/manual/booting/QEMU>`_ because QEMU acts as a boot-loader itself.
 
 To distribute your systems, you can install the boot-loader on a device (e.g.,
 USB stick) and copy the files in the ``/my/disk`` directory on it. Or you can
@@ -53,13 +54,13 @@ Copy Syslinux in it:
    find syslinux-6.03/bios *.c32 -exec cp {} /my/disk/boot/syslinux ;
    cp syslinux-6.03/bios/core/isolinux.bin /my/disk/boot/syslinux/
 
-Copy the `Linux kernel <linux>`_ in it:
+Copy the `Linux kernel </system/manual/booting/linux>`_ in it:
 
 .. code:: bash
 
    cp linux-4.9.8.bin /my/disk/boot/
 
-Copy the `system ramdisk <ramdisk>`_ in it:
+Copy the `system ramdisk </system/manual/booting/ramdisk>`_ in it:
 
 .. code:: bash
 

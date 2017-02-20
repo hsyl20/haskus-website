@@ -10,7 +10,7 @@ section: System
 programming. The long-term aim is to provide a full Haskell user-space
 environment on top of the Linux kernel.
 
-* `Documentation </system/doc>`_
+* `Documentation </system/manual>`_
 * `Demo </system/demo/>`_
 * `Sources <http://github.com/haskus/haskus-system>`_
 

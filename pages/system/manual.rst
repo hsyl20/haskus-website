@@ -12,17 +12,17 @@ system: input, display, sound, network, etc.
 Contents
 --------
 
-1. `Introduction <manual/intro>`_
+1. `Introduction </system/manual/intro>`_
 
-   1. `Modules overview <manual/modules_overview>`_
+   1. `Modules overview </system/manual/modules_overview>`_
 
-#. `Building and Booting a System <manual/booting>`_
+#. `Building and Booting a System </system/manual/booting>`_
 
-   1. `Building systems <manual/booting/building>`_
-   1. `Creating ramdisks <manual/booting/ramdisk>`_
-   1. `Building Linux <manual/booting/linux>`_
-   1. `Testing with QEMU <manual/booting/QEMU>`_
-   1. `Distributing your system <manual/booting/distributing>`_
+   1. `Building systems </system/manual/booting/building>`_
+   1. `Creating ramdisks </system/manual/booting/ramdisk>`_
+   1. `Building Linux </system/manual/booting/linux>`_
+   1. `Testing with QEMU </system/manual/booting/QEMU>`_
+   1. `Distributing your system </system/manual/booting/distributing>`_
 
 
 
