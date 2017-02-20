@@ -28,7 +28,7 @@ Kernel
 * it doesn't rely on usual user-space kernel interfaces (e.g., libdrm, libinput,
   X11, wayland, etc.) to communicate with the kernel
 
-Note however that programs using the haskus system are compiled with GHC:
+Note however that programs using the ``haskus-system`` are compiled with GHC:
 hence they still depend on GHC's runtime system (RTS) dependencies (libc, etc.).
 Programs are statically compiled to embed those dependencies.
 
