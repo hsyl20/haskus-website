@@ -186,14 +186,11 @@ pass to every function applicable to it. The following code shows how to do it.
       randDev <- getDeviceHandleByName dm "/virtual/mem/urandom"
                   >..~!!> sysErrorShow "Cannot get handle for \"urandom\" device"
    
-      let
-         readWord64 fd = readStorable @Word64 fd Nothing
-   
-      readWord64 randDev
+      readStorable @Word64 randDev Nothing
          >.~.> (\a -> writeStrLn term ("From urandom device: " ++ show a))
          >..~!> const (writeStrLn term "Cannot read urandom device")
    
-      readWord64 zeroDev
+      readStorable @Word64 zeroDev Nothing
          >.~.> (\a -> writeStrLn term ("From zero device: "   ++ show a))
          >..~!> const (writeStrLn term "Cannot read zero device")
    
@@ -257,46 +254,8 @@ read and sometimes written into from user-space.  Sometimes, when the tree
 relationship between devices is not sufficient, relations between devices are
 represented as symbolic links.
    
-
-Internally Linux dynamically adds and removes files and directories in the
-``sysfs`` file-system, when devices are plugged or unplugged. To signal it to
-user-space, it sends kernel events in a Netlink socket. The Netlink socket is
-also used to pass some other messages, for instance when the kernel wants to
-ask something to the user-space. ``haskus-system`` handles a Netlink socket,
-parses received kernel events sent by the kernel and delivers them through a
-broadcast channel.
-
-In usual Linux distributions, a daemon called ``udev`` is responsible of handling
-kernel events received through the Netlink socket. Rules can be written to react
-to specific events. In particular, it is responsible of creating device special
-file in the ``/dev`` directory. The naming of theses special files is a big deal
-for these distributions as applications use them directly afterwards and don't
-use the real device identifier (that is the device path in the ``sysfs``
-file-system). In ``haskus-system``, high-level APIs are provided to avoid direct
-references to device special files.
-
-UNIX systems (like most distributions using Linux) uses a ``/dev/`` file-system
-and let applications directly access some devices through their device special
-files in this FS. Access control is ensured by file permissions (user, user
-groups, etc.).
-
-In UNIX parlance, to get a device handle we need to open a special file
-associated to the device we want to use and that will return the required
-reference (as a file descriptor). Ideally device special files should be in
-device directory in ``sysfs``. Sadly, that is not the case and instead we can
-only find the required information to create an appropriate special file that we
-can then open. ``haskus-system`` creates this special file in a ``tmpfs``
-file-system in memory, opens it and then deletes it.
-
-Linux identifies each device with a unique couple of numbers: the major and the
-minor identifiers. It also distinguishes between character devices and block
-devices. The former are accessed directly while the latter are a bit more
-abstracted: for instance the kernel can use buffering strategies to limit the
-number of raw accesses to the devices. 
-
-
-File descriptor
-~~~~~~~~~~~~~~~
+File descriptor vs Handle
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Linux allows programs in user-space to have handles on kernel objects.
 Suppose the kernel has an object ``A`` and a reference ``R_A`` on ``A``.  Instead of
@@ -315,6 +274,60 @@ another process does not allow to share the referred kernel object.
 
 In ``haskus-system`` we use the term "handle" instead of "file descriptor" as we
 find it more descriptive.
+
+
+Device special files and /dev
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ideally there would be a system call to get a handle on a device by providing
+its unique identifier (similarly to the ``getDevieHandleByName`` API provided by
+``haskus-system``). Sadly it's not the case. We have to:
+
+1. Get the unique device triple identifier from its name
+
+   Linux has two ways to uniquely identify devices:
+   
+   * a path in ``/devices`` in the ``sysfs`` file-system
+   * a triple: a major number, a minor number and a device type (``character`` or
+     ``block``).
+
+   ``haskus-system`` retrieves the triple by reading different files the the
+   ``sysfs`` device directory.
+
+2. Create and open a device special file
+
+   With a device triple we can create a special file (using the ``mknod`` system
+   call).
+   
+   ``haskus-system`` creates the device special file in a virtual file system
+   (``tmpfs``), then opens it and finally deletes it.
+
+Usual Linux distributions use a virtual file-system mounted in ``/dev`` and
+create device special files in it. They let some applications directly access
+device special files in ``/dev`` (e.g., X11). Access control is ensured by file
+permissions (user, user groups, etc.). We don't want to do this in
+``haskus-system``: we provide high-level APIs instead.
+
+
+Netlink socket
+~~~~~~~~~~~~~~
+
+Linux dynamically adds and removes files and directories in the ``sysfs``
+file-system, when devices are plugged or unplugged. To signal it to user-space,
+it sends kernel events in a Netlink socket. The Netlink socket is also used to
+pass some other messages, for instance when the kernel wants to ask something to
+the user-space. ``haskus-system`` handles a Netlink socket, parses received
+kernel events and delivers them through a STM broadcast channel.
+
+In usual Linux distributions, a daemon called ``udev`` is responsible of
+handling these kernel events. Rules can be written to react to specific events.
+In particular, ``udev`` is responsible of creating device special file in the
+``/dev`` directory. The naming of theses special files is a big deal for these
+distributions as applications use them directly afterwards and don't use the
+other unique device identifiers (i.e., the device path in the ``sysfs``
+file-system).  In ``haskus-system``, high-level APIs are provided to avoid
+direct references to device special files.
+
 
 Further reading
 ---------------
