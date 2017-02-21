@@ -79,9 +79,9 @@ rebooting). For instance input devices (keyboards, mice, joysticks, etc.) or
 mass storages. The operating system has to signal when a new device becomes
 available or unavailable.
 
-   As a side note, Linux loads some drivers asynchronously to speed up the boot.
-   Hence devices handled by these drivers are detected after the boot as if they
-   had just been plugged in.
+   Linux loads some drivers asynchronously to speed up the boot.  Hence devices
+   handled by these drivers are detected after the boot as if they had just been
+   plugged in.
 
 ``haskus-system`` provides an interface to receive events when the state of the
 device tree changes. The following code shows how to get and print these
